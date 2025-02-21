@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('/fonts/MYRIADPRO-REGULAR.woff2') format('woff2'),
+         url('/fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Light';
+    src: url('/fonts/MyriadPro-Light.woff2') format('woff2'),
+         url('/fonts/MyriadPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f7;
+    color: #333333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.left {
+    color: #333333;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.left h1 {
+    margin: 0;
+    font-size: 6vw;
+    font-family: 'Myriad Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.left p {
+    margin: 10px 0;
+    font-size: 3vw;
+    font-family: 'Myriad Pro Light', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #333333;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0071e3;
+}
+
+.right {
+    color: #333333;
+    text-align: right;
+    flex: 1;
+}
+
+.right a, .right p {
+    position: relative;
+    display: block;
+    min-width: 240px;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 3vw;
+    color: #333333;
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+}
+
+.right a:hover, .right p:hover {
+    background: #0071e3;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.right a:focus, .right p:focus {
+    border: 2px solid #0071e3;
+    background: #ffffff;
+    color: #333333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px; /* Reducido para móvil */
+        width: 98%; /* Aumentado para ocupar más espacio */
+    }
+    .left, .right {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .left {
+        padding-left: 0;
+        align-items: center;
+    }
+    .left h1 {
+        font-size: 8vw;
+    }
+    .left p {
+        font-size: 4vw;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+    .right a, .right p {
+        min-width: 200px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98%; /* Aumentado para ocupar más espacio */
+        padding: 8px; /* Reducido aún más para móvil */
+    }
+    .left h1 {
+        font-size: 10vw;
+    }
+    .left p {
+        font-size: 5vw;
+    }
+    .right a, .right p {
+        min-width: 160px;
+        font-size: 4.5vw;
+        padding: 10px 20px;
+        margin-bottom: 8px;
+    }
+    .social-icons a {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+}
